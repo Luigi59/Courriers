@@ -35,6 +35,7 @@ public class SimpleLetter extends Letter<Text> {
 	/**
 	 * @see courrier.Letter#doAction()
 	 */
+	@Override
 	public void doAction() {
 		/* No action for simple letter */
 	}
@@ -43,6 +44,7 @@ public class SimpleLetter extends Letter<Text> {
 	/**
 	 * @see courrier.Letter#getCost()
 	 */
+	@Override
 	public int getCost() {
 		return SimpleLetter.SIMPLE_LETTER_COST;
 	}
@@ -51,6 +53,7 @@ public class SimpleLetter extends Letter<Text> {
 	/**
 	 * @see courrier.Letter#toString()
 	 */
+	@Override
 	public String toString() {
 		return "a simple letter whose content is " + this.content;
 	}

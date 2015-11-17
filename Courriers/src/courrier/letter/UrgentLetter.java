@@ -36,6 +36,7 @@ public class UrgentLetter extends LetterDecorator {
 	/**
 	 * @see courrier.Letter#doAction()
 	 */
+	@Override
 	public void doAction() {
 		this.content.doAction();
 	}
@@ -44,6 +45,7 @@ public class UrgentLetter extends LetterDecorator {
 	/**
 	 * @see courrier.Letter#getCost()
 	 */
+	@Override
 	public int getCost() {
 		return this.content.getCost() * UrgentLetter.COSTFACTOR;
 	}
@@ -52,6 +54,7 @@ public class UrgentLetter extends LetterDecorator {
 	/**
 	 * @see courrier.Letter#toString()
 	 */
+	@Override
 	public String toString() {
 		return "an urgent letter whose content is " + this.content;
 	}

@@ -39,9 +39,10 @@ public class RegisteredLetter extends LetterDecorator {
 	/**
 	 * @see courrier.Letter#doAction()
 	 */
+	@Override
 	public void doAction() {
 		this.content.doAction();
-		Text text = new Text("Acknowledgment of receipt for " + this);
+		Text text = new Text("acknowledgment of receipt for " + this);
 		AcknowledgmentOfReceipt aor = new AcknowledgmentOfReceipt(this.receiver, this.sender, text);
 		this.receiver.getCity().sendLetter(aor);
 	}
@@ -50,6 +51,7 @@ public class RegisteredLetter extends LetterDecorator {
 	/**
 	 * @see courrier.Letter#getCost()
 	 */
+	@Override
 	public int getCost() {
 		return this.content.getCost() + RegisteredLetter.OVERCOST;
 	}
@@ -58,6 +60,7 @@ public class RegisteredLetter extends LetterDecorator {
 	/**
 	 * @see courrier.Letter#toString()
 	 */
+	@Override
 	public String toString() {
 		return "a registered letter whose content is " + this.content;
 	}

@@ -22,9 +22,10 @@ public class Main {
 	protected List<Inhabitant> inhabitants;
 	protected Random random;
 	
-	private static final String CITY_NAME = "Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch";
+	public static final String CITY_NAME = "Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch";
 	private static final int INHABITANTS = 100;
 	private static final int DAYS = 6;
+	/* argent minimal et maximal des promissory letter */
 	private static final int MINIMUM_MONEY = 10;
 	private static final int MAXIMUM_MONEY = 1000;
 	
@@ -48,7 +49,7 @@ public class Main {
 	 * 
 	 * @return city
 	 */
-	protected City getCity() {
+	public City getCity() {
 		return this.city;
 	}
 	
@@ -59,7 +60,7 @@ public class Main {
 	 * @param i : int
 	 * @return random int between 0 and i
 	 */
-	protected int getRandomInt(int i) {
+	public int getRandomInt(int i) {
 		return this.random.nextInt(i);
 	}
 	
@@ -70,7 +71,7 @@ public class Main {
 	 * 
 	 * @return true or false (randomly)
 	 */
-	protected boolean randomBoolean() {
+	public boolean randomBoolean() {
 		return this.random.nextBoolean();
 	}
 	
@@ -80,7 +81,7 @@ public class Main {
 	 * 
 	 * @return a random type of letter
 	 */
-	protected Letter<?> createRandomLetter() {
+	public Letter<?> createRandomLetter() {
 		Letter<?> letter;
 		boolean isUrgent, isRegistered;
 		int rand1, rand2;
@@ -128,7 +129,7 @@ public class Main {
 		
 		System.out.println("Mailing letters for " + DAYS + " days");
 		
-		for(i = 0; i < 6; ++i) {
+		for(i = 0; i < DAYS; ++i) {
 			System.out.println("**************************************************");
 			System.out.println("Day " + (i +1));
 			

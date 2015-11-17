@@ -41,6 +41,7 @@ public class Text implements Content {
 	 * 
 	 * @return a String defining the Text
 	 */
+	@Override
 	public String toString() {
 		return "a text content (" + this.getText() + ")";
 	}

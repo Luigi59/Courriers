@@ -28,6 +28,7 @@ public class AcknowledgmentOfReceipt extends SimpleLetter {
 	/**
 	 * @see courrier.Letter#doAction()
 	 */
+	@Override
 	public void doAction() {
 		/* No action for acknowledgment of receipt */
 	}
@@ -36,6 +37,7 @@ public class AcknowledgmentOfReceipt extends SimpleLetter {
 	/**
 	 * @see courrier.Letter#toString()
 	 */
+	@Override
 	public String toString() {
 		return "an acknowledgement of receipt which is " + super.toString();
 	}

@@ -27,6 +27,7 @@ public class ThanksLetter extends SimpleLetter {
 	/**
 	 * @see courrier.Letter#doAction()
 	 */
+	@Override
 	public void doAction() {
 		/* No action for thanks letter */
 	}
@@ -35,6 +36,7 @@ public class ThanksLetter extends SimpleLetter {
 	/**
 	 * @see courrier.Letter#toString()
 	 */
+	@Override
 	public String toString() {
 		return "a thanks letter which is " + super.toString();
 	}

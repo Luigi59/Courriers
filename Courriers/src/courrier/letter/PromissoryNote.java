@@ -26,10 +26,11 @@ public class PromissoryNote extends Letter<Money> {
 	/**
 	 * @see courrier.Letter#doAction()
 	 */
+	@Override
 	public void doAction() {
 		this.sender.debit(this.content.getAmount());
 		this.receiver.credit(this.content.getAmount());
-		Text text = new Text("Thanks for " + this);
+		Text text = new Text("thanks for " + this);
 		ThanksLetter thanks = new ThanksLetter(this.receiver, this.sender, text);
 		this.receiver.getCity().sendLetter(thanks);
 	}
@@ -38,6 +39,7 @@ public class PromissoryNote extends Letter<Money> {
 	/**
 	 * @see courrier.Letter#getCost()
 	 */
+	@Override
 	public int getCost() {
 		return this.content.getAmount()/100 + SimpleLetter.SIMPLE_LETTER_COST;
 	}
@@ -46,6 +48,7 @@ public class PromissoryNote extends Letter<Money> {
 	/**
 	 * @see courrier.Letter#toString()
 	 */
+	@Override
 	public String toString() {
 		return "a promissory note letter whose content is " + this.content;
 	}
